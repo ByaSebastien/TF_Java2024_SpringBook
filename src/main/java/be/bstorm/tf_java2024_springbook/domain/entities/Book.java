@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -25,8 +27,13 @@ public class Book {
     @Column(name = "DESCRIPTION", nullable = true)
     private String description;
 
-    public Book(String title, String description) {
+    @Temporal(TemporalType.DATE)
+    @Column(name = "RELEASE",nullable = true)
+    private LocalDate release;
+
+    public Book(String title, String description, LocalDate release) {
         this.title = title;
         this.description = description;
+        this.release = release;
     }
 }

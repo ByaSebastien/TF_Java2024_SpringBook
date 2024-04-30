@@ -1,8 +1,6 @@
-server:
-  port: 8080
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5433/SpringBook
+    url: jdbc:postgresql://localhost:5433/springbook
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
@@ -13,3 +11,5 @@ spring:
     properties:
       hibernate:
         format_sql: true
+server:
+  port: 8080
